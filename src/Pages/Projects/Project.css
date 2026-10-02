@@ -1,0 +1,29 @@
+.project-page{
+    background-color:white;
+    height: fit-content;
+    min-height: 100vh;
+    background-color: white;
+}
+.pro-btn{
+    border-radius: 5px;
+    background-color:rgb(158, 157, 157);
+    height: fit-content;
+    padding: 10px;
+    margin: 10px;
+}
+.project-add-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.pro-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+.pro-btn:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color: rgb(164, 164, 228);
+}

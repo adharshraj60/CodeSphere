@@ -1,0 +1,33 @@
+#nav-container{
+    background-color: rgb(158, 157, 157);
+    border-radius: 30px;
+    margin: 20px;
+}
+/* .codesphere-navbar {
+    background: transparent !important;
+    margin-bottom: 0 !important;
+} */
+#nav-navigations{
+    font-weight: bolder;
+}
+#nav-search-btn{
+    border-color: white;
+    color: black;
+}
+#nav-search{
+    background-color: rgb(200, 196, 196);
+}
+.nav-toggle-page{
+    background-color:  rgb(158, 157, 157);
+}
+.profile-icon {
+    color: black;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    color: #555;
+}

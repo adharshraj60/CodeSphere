@@ -1,0 +1,94 @@
+.developer-card {
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.developer-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.developer-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.developer-details {
+    text-align: center;
+}
+
+.developer-details h3 {
+    margin: 5px 0;
+    font-size: 21px;
+}
+
+.developer-role {
+    color: #6366f1;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.developer-location {
+    color: #666;
+    font-size: 14px;
+}
+
+.developer-bio {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.developer-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 15px 0;
+}
+
+.developer-skills span {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.developer-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.profile-btn {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-btn:hover {
+    background: #3730a3;
+}

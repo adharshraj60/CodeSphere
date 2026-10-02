@@ -1,0 +1,7 @@
+.footer{
+    background-color: black;
+    min-height: 70vh;
+    /* height: fit-content; */
+    color: white;
+    padding-top:50px ;
+}
