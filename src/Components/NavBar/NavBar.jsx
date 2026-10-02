@@ -51,7 +51,7 @@ export default function NavBar(props) {
                 Projects
               </Nav.Link>
               <hr />
-              <Nav.Link href="#action4" id='nav-navigations'>
+              <Nav.Link href="/explore" id='nav-navigations'>
                 Explore
               </Nav.Link>
               <hr />
