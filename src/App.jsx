@@ -6,6 +6,7 @@ import Developer from "./Pages/Developer/Developer";
 import Project from "./Pages/Projects/Project";
 import DeveloperProfile from "./Pages/DeveloperProfile/DeveloperProfile";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import Explore from "./Pages/Explore/Explore";
 
 // npx json-server --watch db.json --port 3000
 
@@ -20,7 +21,8 @@ export default function App() {
         <Route path="/developer" element={<Developer/>}/>
         <Route path="/Project" element={<Project/>}/> 
         <Route path="/developerprofile/:id" element={<DeveloperProfile/>}/> 
-        <Route path="/dashboard" element={<Dashboard/>}/>    
+        <Route path="/dashboard" element={<Dashboard/>}/> 
+        <Route path="/explore" element={<Explore/>}/>   
         </Routes>
       </BrowserRouter>
     </div>
