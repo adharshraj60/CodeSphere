@@ -1,6 +1,5 @@
 import "./Register.css"
 import { Link } from "react-router-dom"
-import Footer from "../../Components/Footer/Footer.jsx"
 import { useState } from "react"
 
 
@@ -49,7 +48,6 @@ export default function Register() {
                     <Link to={"/login"}>LogIn</Link>
                 </div>
             </div >
-            <Footer />
         </div>
     )
 }

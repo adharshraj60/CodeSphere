@@ -7,8 +7,43 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from "../../assets/logo.png"
 import "./NavBar.css"
 import { FaUserCircle } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 
-export default function NavBar(props) {
+export default function NavBar() {
+
+  const location = useLocation();
+
+  let placeholder = "";
+
+  if (location.pathname === "/") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/developer") {
+    placeholder = "Search Developer ...";
+  }
+  else if (location.pathname === "/project") {
+    placeholder = "Search Project ...";
+  }
+   else if (location.pathname === "/explore") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/dashboard") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/login") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/register") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/developerprofile") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/projectdetails") {
+    placeholder = "Search ...";
+  }
+
+
   return (
     <Navbar expand="lg" >
       <Container fluid id='nav-container'>
@@ -47,7 +82,7 @@ export default function NavBar(props) {
                 Developer
               </Nav.Link>
               <hr />
-              <Nav.Link href="/Project" id='nav-navigations'>
+              <Nav.Link href="/project" id='nav-navigations'>
                 Projects
               </Nav.Link>
               <hr />
@@ -63,7 +98,7 @@ export default function NavBar(props) {
             <Form className="d-flex" >
               <Form.Control
                 type="search"
-                placeholder={props.content}
+                placeholder={placeholder}
                 className="me-2"
                 aria-label="Search"
                 id='nav-search'

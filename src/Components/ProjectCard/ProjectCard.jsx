@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./ProjectCard.css";
 
 export default function ProjectCard({ project }) {
+const navigate=useNavigate()
+
+const handelchange=()=>{
+    navigate(`/projectdetails/${project.id}`)
+}
+
     return (
         <div className="project-card">
 
@@ -52,7 +59,7 @@ export default function ProjectCard({ project }) {
 
                 </div>
 
-                <button className="view-project-btn">
+                <button className="view-project-btn" onClick={handelchange}>
                     View Project
                 </button>
 

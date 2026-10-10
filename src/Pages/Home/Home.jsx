@@ -1,5 +1,3 @@
-import NavBar from "../../Components/NavBar/NavBar"
-import Footer from "../../Components/Footer/Footer"
 import "./Home.css"
 import { Link } from "react-router-dom"
 
@@ -7,7 +5,6 @@ export default function Home() {
   return (
       <div>
             <div className='home-page'>
-                <NavBar content="Search ..."/>
                 <div className='home-hero'>
                     <h1> BUILD. CONNECT. LAUNCH. </h1>
                 </div>
@@ -35,9 +32,6 @@ export default function Home() {
                      
                 </div>
             </div>
-           <div>
-            <Footer/>
-            </div> 
         </div>
   )
 }

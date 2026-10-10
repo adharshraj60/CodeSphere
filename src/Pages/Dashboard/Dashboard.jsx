@@ -1,6 +1,4 @@
 import "./Dashboard.css"
-import DashboardNavBar from "../../Components/NavBar/DashboardNavBar"
-import Footer from "../../Components/Footer/Footer"
 
 
 
@@ -9,8 +7,7 @@ export default function Dashboard() {
     return (
         <div>
             <div className="explore-page">
-                <DashboardNavBar />
-                <hr />
+                <hr/>
                 <div className="explore-hero">
                     <h3>Welcome back, Aadhi 👋</h3> <br />
                     <p>Discover developers, build projects & grow.</p>
@@ -28,7 +25,6 @@ export default function Dashboard() {
 
 
             </div>
-            <Footer />
         </ div>
     )
 }

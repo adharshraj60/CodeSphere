@@ -1,14 +1,9 @@
 import "./Login.css"
 import { Link } from 'react-router-dom'
-import Footer from "../../Components/Footer/Footer"
-import NavBar from "../../Components/NavBar/NavBar"
 export default function Login() {
     return (
         <div >
             <div className='login-page'>
-                <div>
-                    <NavBar content="Search ..." />
-                </div>
                 <div className="login-box">
                     <div className='login-div'>
                         <label>E-mail :</label>
@@ -24,7 +19,6 @@ export default function Login() {
                     <Link to={"/register"}> Register</Link>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

@@ -1,9 +1,7 @@
 import DeveloperCard from "../../Components/DeveloperCard/DeveloperCard"
-import NavBar from "../../Components/NavBar/NavBar"
 import "./Developer.css"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Footer from "../../Components/Footer/Footer";
 
 export default function Developer() {
     const [developers, setDevelopers] = useState([]);
@@ -22,7 +20,6 @@ export default function Developer() {
     return (
         <div>
             <div className="developer-page">
-                <NavBar content="Search Developer ..." />
                  <div className="project-btn">
                         <button className="developer-add-btn">+ Add  Profile </button>
                     </div>
@@ -38,7 +35,6 @@ export default function Developer() {
                     ))}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

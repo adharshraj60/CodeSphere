@@ -1,8 +1,6 @@
 import "./Project.css"
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Footer from "../../Components/Footer/Footer"
-import NavBar from "../../Components/NavBar/NavBar"
 import ProjectCard from "../../Components/ProjectCard/ProjectCard"
 
 export default function Project() {
@@ -23,7 +21,6 @@ export default function Project() {
     return (
         <div>
             <div className="project-page">
-                <NavBar content="Search Project ..." />
                     <div className="project-add-btn">
                         <button className="pro-btn">+ Add  Project </button>
                     </div>
@@ -39,7 +36,6 @@ export default function Project() {
                         ))}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
