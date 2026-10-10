@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Dashboard.css"
 
 
@@ -13,8 +14,8 @@ export default function Dashboard() {
                     <p>Discover developers, build projects & grow.</p>
                 </div>
                 <div className="explore-btns" >
-                    <button className="explore-btn">+ Add Project</button>
-                    <button className="explore-btn">+ Add Profile</button>
+                    <Link to={"/developerprofileform"}><button className="explore-btn">+ Add Project</button></Link>
+                    <Link to={"/addprojectform"}><button className="explore-btn">+ Add Profile</button></Link>
                 </div>
                 <div className="">
                     <h4> Feature Projects</h4>

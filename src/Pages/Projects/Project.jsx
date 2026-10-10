@@ -2,6 +2,7 @@ import "./Project.css"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import ProjectCard from "../../Components/ProjectCard/ProjectCard"
+import { Link } from "react-router-dom";
 
 export default function Project() {
 
@@ -22,7 +23,7 @@ export default function Project() {
         <div>
             <div className="project-page">
                     <div className="project-add-btn">
-                        <button className="pro-btn">+ Add  Project </button>
+                        <Link to={"/addprojectform"}><button className="pro-btn">+ Add  Project </button></Link>
                     </div>
                     <hr />
                 <div className="pro-list">

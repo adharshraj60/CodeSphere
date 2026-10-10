@@ -1,0 +1,28 @@
+.create-project-container {
+max-width: 1000px;
+}
+
+.create-project-card {
+background: #ffffff;
+}
+
+.create-project-card .form-label {
+font-weight: 500;
+color: #343a40;
+}
+
+.create-project-card .form-control,
+.create-project-card .form-select {
+padding: 11px 14px;
+border-radius: 8px;
+}
+
+.create-project-card .form-control:focus,
+.create-project-card .form-select:focus {
+border-color: #86b7fe;
+box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+}
+
+.create-project-card textarea {
+resize: vertical;
+}

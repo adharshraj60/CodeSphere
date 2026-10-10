@@ -1,0 +1,33 @@
+.developer-profile-container {
+max-width: 1000px;
+}
+
+.developer-profile-card {
+background: #ffffff;
+}
+
+.section-heading {
+color: #0d6efd;
+font-weight: 600;
+}
+
+.developer-profile-card .form-label {
+font-weight: 500;
+color: #343a40;
+}
+
+.developer-profile-card .form-control,
+.developer-profile-card .form-select {
+padding: 11px 14px;
+border-radius: 8px;
+}
+
+.developer-profile-card .form-control:focus,
+.developer-profile-card .form-select:focus {
+border-color: #86b7fe;
+box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+}
+
+.developer-profile-card textarea {
+resize: vertical;
+}

@@ -2,6 +2,7 @@ import DeveloperCard from "../../Components/DeveloperCard/DeveloperCard"
 import "./Developer.css"
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Developer() {
     const [developers, setDevelopers] = useState([]);
@@ -21,7 +22,7 @@ export default function Developer() {
         <div>
             <div className="developer-page">
                  <div className="project-btn">
-                        <button className="developer-add-btn">+ Add  Profile </button>
+                        <Link to={"/developerprofileform"}><button className="developer-add-btn">+ Add  Profile </button></Link>
                     </div>
                 <hr />
                 <div className="developers-container">

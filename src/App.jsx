@@ -10,6 +10,8 @@ import Explore from "./Pages/Explore/Explore";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
+import DevProfileForm from "./Pages/DevProfileForm/DevProfileForm";
+import AddProjectForm from "./Pages/AddProjectForm/AddProjectForm";
 
 // npx json-server --watch db.json --port 3000
 
@@ -27,7 +29,9 @@ export default function App() {
         <Route path="/developerprofile/:id" element={<DeveloperProfile/>}/> 
         <Route path="/dashboard" element={<Dashboard/>}/> 
         <Route path="/explore" element={<Explore/>}/>
-        <Route path="/projectdetails/:id" element={<ProjectDetails/>}/>   
+        <Route path="/projectdetails/:id" element={<ProjectDetails/>}/> 
+        <Route path="/developerprofileform" element={<DevProfileForm/>}/>  
+        <Route path="/addprojectform" element={<AddProjectForm/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
