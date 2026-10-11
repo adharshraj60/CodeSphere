@@ -7,9 +7,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from "../../assets/logo.png"
 import "./NavBar.css"
 import { FaUserCircle } from "react-icons/fa";
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({ isLoggedIn }) {
 
   const location = useLocation();
 
@@ -24,7 +24,7 @@ export default function NavBar() {
   else if (location.pathname === "/project") {
     placeholder = "Search Project ...";
   }
-   else if (location.pathname === "/explore") {
+  else if (location.pathname === "/explore") {
     placeholder = "Search ...";
   }
   else if (location.pathname === "/dashboard") {
@@ -54,7 +54,7 @@ export default function NavBar() {
             alt="CodeSphere"
             width="70"
             height="70"
-            />
+          />
           CodeSphere
         </Navbar.Brand>
 
@@ -74,25 +74,29 @@ export default function NavBar() {
           <Offcanvas.Body className="nav-toggle-page">
             <Nav className="justify-content-end flex-grow-1 pe-3">
 
-              <Nav.Link href="/" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/"} id='nav-navigations'>
                 Home
               </Nav.Link>
               <hr />
-              <Nav.Link href="/developer" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/developer"} id='nav-navigations'>
                 Developer
               </Nav.Link>
               <hr />
-              <Nav.Link href="/project" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/project"} id='nav-navigations'>
                 Projects
               </Nav.Link>
               <hr />
-              <Nav.Link href="/explore" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/explore"} id='nav-navigations'>
                 Explore
               </Nav.Link>
               <hr />
-              <Nav.Link href="/login" id='nav-navigations'>
-                  <FaUserCircle className="profile-icon"/>
-              </Nav.Link>
+              {isLoggedIn ? (
+                <Nav.Link as={NavLink} to={"/dashboard"} id='nav-navigations'>
+                  <FaUserCircle className="profile-icon" />
+                </Nav.Link>
+              ) : (<Nav.Link as={NavLink} to={"/login"} id='nav-navigations'>
+                Login
+              </Nav.Link>)}
             </Nav>
 
             <Form className="d-flex" >

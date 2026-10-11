@@ -12,7 +12,7 @@ export default function Home() {
                     <p>Showcase your work.Connect with developers.Build something great. </p>
                 </div>
                 <div className='home-btns'>
-                    <button className='home-btn'>Explore Projects</button>
+                    <Link to={"/project"}><button className='home-btn'>Explore Projects</button></Link>
                     <Link to={"./register"}><button className='home-btn'>Join CodeSphere </button></Link>
                 </div>
             </div>
