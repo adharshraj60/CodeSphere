@@ -1,10 +1,11 @@
 import "./Register.css"
-import { Link } from "react-router-dom"
-import Footer from "../../Components/Footer/Footer.jsx"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 
-export default function Register() {
+export default function Register({setIsLoggedIn}) {
+    const navigate =useNavigate()
+
     const [form, setForm] = useState({
         name: "",
         phone: "",
@@ -23,6 +24,12 @@ export default function Register() {
 
     }
 
+    const handlesubmit =()=>{
+        localStorage.setItem("form", JSON.stringify(form))
+        setIsLoggedIn(true)
+        navigate("/dashboard")
+    }
+
     return (
         <div >
             <div className='register-page'>
@@ -39,7 +46,7 @@ export default function Register() {
                         <label htmlFor="">Confirm Password  </label>
                         <input type="password" placeholder='Confirm Password' className='form-two' name='password' onChange={handlechange} />
                         <div className='form-btn-div'>
-                            <Link to="/dashboard"><button className='form-btn'>Submit</button></Link>
+                            <button className='form-btn' onClick={handlesubmit}>Submit</button>
                         </div>
                         {/* <h1>{form.password}</h1> */}
                     </form>
@@ -49,7 +56,6 @@ export default function Register() {
                     <Link to={"/login"}>LogIn</Link>
                 </div>
             </div >
-            <Footer />
         </div>
     )
 }

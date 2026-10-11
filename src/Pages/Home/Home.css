@@ -4,6 +4,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+     margin-top: -150px;
+    padding-top: 150px;
 }
 .home-hero{
     width: 100%;

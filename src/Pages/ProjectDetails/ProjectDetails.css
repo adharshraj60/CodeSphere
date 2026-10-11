@@ -1,0 +1,10 @@
+#pro-details-pg{
+    width: 70vw;
+    height: fit-content;
+    margin-bottom: 20PX;
+}
+.pro-details-pg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -7,8 +7,43 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from "../../assets/logo.png"
 import "./NavBar.css"
 import { FaUserCircle } from "react-icons/fa";
+import { NavLink, useLocation } from 'react-router-dom';
 
-export default function NavBar(props) {
+export default function NavBar({ isLoggedIn }) {
+
+  const location = useLocation();
+
+  let placeholder = "";
+
+  if (location.pathname === "/") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/developer") {
+    placeholder = "Search Developer ...";
+  }
+  else if (location.pathname === "/project") {
+    placeholder = "Search Project ...";
+  }
+  else if (location.pathname === "/explore") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/dashboard") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/login") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/register") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/developerprofile") {
+    placeholder = "Search ...";
+  }
+  else if (location.pathname === "/projectdetails") {
+    placeholder = "Search ...";
+  }
+
+
   return (
     <Navbar expand="lg" >
       <Container fluid id='nav-container'>
@@ -19,7 +54,7 @@ export default function NavBar(props) {
             alt="CodeSphere"
             width="70"
             height="70"
-            />
+          />
           CodeSphere
         </Navbar.Brand>
 
@@ -39,31 +74,35 @@ export default function NavBar(props) {
           <Offcanvas.Body className="nav-toggle-page">
             <Nav className="justify-content-end flex-grow-1 pe-3">
 
-              <Nav.Link href="/" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/"} id='nav-navigations'>
                 Home
               </Nav.Link>
               <hr />
-              <Nav.Link href="/developer" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/developer"} id='nav-navigations'>
                 Developer
               </Nav.Link>
               <hr />
-              <Nav.Link href="/Project" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/project"} id='nav-navigations'>
                 Projects
               </Nav.Link>
               <hr />
-              <Nav.Link href="/explore" id='nav-navigations'>
+              <Nav.Link as={NavLink} to={"/explore"} id='nav-navigations'>
                 Explore
               </Nav.Link>
               <hr />
-              <Nav.Link href="/login" id='nav-navigations'>
-                  <FaUserCircle className="profile-icon"/>
-              </Nav.Link>
+              {isLoggedIn ? (
+                <Nav.Link as={NavLink} to={"/dashboard"} id='nav-navigations'>
+                  <FaUserCircle className="profile-icon" />
+                </Nav.Link>
+              ) : (<Nav.Link as={NavLink} to={"/login"} id='nav-navigations'>
+                Login
+              </Nav.Link>)}
             </Nav>
 
             <Form className="d-flex" >
               <Form.Control
                 type="search"
-                placeholder={props.content}
+                placeholder={placeholder}
                 className="me-2"
                 aria-label="Search"
                 id='nav-search'

@@ -1,0 +1,38 @@
+.explore-page {
+padding-top: 20px;
+padding-bottom: 40px;
+}
+
+.explore-page h1 {
+font-size: 32px;
+font-weight: bold;
+}
+
+.explore-search {
+max-width: 500px;
+margin: 25px auto;
+}
+
+.project-card {
+border-radius: 10px;
+transition: 0.3s;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .card-title {
+font-size: 20px;
+font-weight: bold;
+}
+
+.project-card .card-text {
+color: #666;
+min-height: 50px;
+}
+
+.project-card p {
+font-size: 14px;
+}
